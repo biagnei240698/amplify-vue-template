@@ -17,11 +17,6 @@ function listTodos() {
   }); 
 }
 
-  
-  function deleteTodo(id: string) {
-    client.models.Todo.delete({ id })
-  }
-
 function createTodo() {
   client.models.Todo.create({
     content: window.prompt("Todo content")
@@ -30,7 +25,10 @@ function createTodo() {
     listTodos();
   });
 }
-    
+// delete function
+function deleteTodo(id: string) {
+    client.models.Todo.delete({ id })
+  }
 // fetch todos when the component is mounted
  onMounted(() => {
   listTodos();
@@ -52,8 +50,6 @@ function createTodo() {
       </li>
     </ul>
     <div>
-      🥳 App successfully hosted. Try creating a new todo.
-      <br />
       <a href="https://docs.amplify.aws/gen2/start/quickstart/nextjs-pages-router/">
         Review next steps of this tutorial.
       </a>
