@@ -9,6 +9,9 @@ const tipoEvento = ref("")
 const lugar = ref("")
 const nombreEvento = ref("")
 const Baggins = ref("")
+
+
+
 function alerttext(){
   alert (message.value)
 }
@@ -18,8 +21,9 @@ function alerttext(){
   <main>
     <authenticator>
       <template v-slot="{ user, signOut }">
-        <h1>Hello {{user?.signInDetails?.loginId}}'s todos</h1>
+        <h1>Hola {{user?.signInDetails?.loginId}}'s</h1>
         <Todos />
+        <!--
         <p>Message is: {{ message }}  {{ fecha }}</p>
         <input v-model="message" placeholder="edit me" />
         <Input v-model="fecha" placeholder="fecha"/>
@@ -27,8 +31,10 @@ function alerttext(){
         <Input v-model="lugar" placeholder="lugar"/>
         <Input v-model="nombreEvento" placeholder="nombreEvento"/>
         <Input v-model="Baggins" placeholder="Baggins"/>
-        <button @click="signOut">Sign Out</button>
         <button @click="alerttext">Alert</button>
+        -->
+        <button @click="signOut">Cerrar sesión</button>
+        
       </template>
     </authenticator>
   </main>

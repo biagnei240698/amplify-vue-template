@@ -6,6 +6,17 @@ const schema = a.schema({
     dateEvent: a.string(),
     typeEvent: a.string(),
   }).authorization(allow => [allow.owner()]),
+    
+  eventsRecords: a.customType({
+    id: a.id().required(),
+    author: a.string().required(),
+    title: a.string(),
+    content: a.string(),
+    url: a.string(),
+    ups: a.integer(),
+    downs: a.integer(),
+    version: a.integer(),
+  }),
 });
 
 
@@ -18,6 +29,6 @@ export const data = defineData({
     // to sign API requests with the user authentication token.
     defaultAuthorizationMode: 'userPool',
   },
-})
+});
 
 

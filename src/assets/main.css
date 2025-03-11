@@ -1,6 +1,9 @@
 body {
   margin: 0;
   background: linear-gradient(180deg, rgb(32, 159, 255), rgb(255, 255, 255));
+  /*background-image: url(https://www.starbritestudios.co.uk/images/events/events.png);*/
+  background-image: url(https://static.vecteezy.com/system/resources/previews/002/475/549/non_2x/colorful-firework-background-free-vector.jpg);
+  background-size: cover;
   display: flex;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   height: 100vh;
@@ -13,6 +16,9 @@ main {
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 2em;
+  border-radius: 1em;
 }
 
 button {
@@ -62,4 +68,8 @@ li:hover {
 a {
   font-weight: 800;
   text-decoration: none;
+}
+
+#app {
+  margin-left: -50%;
 }
