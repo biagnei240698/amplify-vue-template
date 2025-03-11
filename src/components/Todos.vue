@@ -17,6 +17,7 @@ function listTodos() {
   }); 
 }
 
+
 function createTodo() {
   client.models.Todo.create({
     content: window.prompt("Todo content")
@@ -25,6 +26,7 @@ function createTodo() {
     listTodos();
   });
 }
+
 // delete function
 function deleteTodo(id: string) {
     client.models.Todo.delete({ id })

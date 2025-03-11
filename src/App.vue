@@ -1,9 +1,17 @@
 <script setup lang="ts">
-import { Authenticator } from "@aws-amplify/ui-vue";
-import "@aws-amplify/ui-vue/styles.css";
-import Todos from './components/Todos.vue';
-import { Fieldset } from '@aws-amplify/ui-react';
-
+import {ref} from "vue"
+import { Authenticator } from "@aws-amplify/ui-vue"
+import "@aws-amplify/ui-vue/styles.css"
+import Todos from './components/Todos.vue'
+const message = ref("")
+const fecha = ref("")
+const tipoEvento = ref("") 
+const lugar = ref("")
+const nombreEvento = ref("")
+const Baggins = ref("")
+function alerttext(){
+  alert (message.value)
+}
 </script>
 
 <template>
@@ -12,14 +20,15 @@ import { Fieldset } from '@aws-amplify/ui-react';
       <template v-slot="{ user, signOut }">
         <h1>Hello {{user?.signInDetails?.loginId}}'s todos</h1>
         <Todos />
-        <Input placeholder="evento"/>
-        <Input placeholder="fecha"/>
-        <Input placeholder="tipoEvento"/>
-        <Input placeholder="lugar"/>
-        <Input placeholder="nombreEvento"/>
-        <Input placeholder="Baggins"/>
-        <Input placeholder="Baggins"/>
+        <p>Message is: {{ message }}  {{ fecha }}</p>
+        <input v-model="message" placeholder="edit me" />
+        <Input v-model="fecha" placeholder="fecha"/>
+        <Input v-model="tipoEvento" placeholder="tipoEvento"/>
+        <Input v-model="lugar" placeholder="lugar"/>
+        <Input v-model="nombreEvento" placeholder="nombreEvento"/>
+        <Input v-model="Baggins" placeholder="Baggins"/>
         <button @click="signOut">Sign Out</button>
+        <button @click="alerttext">Alert</button>
       </template>
     </authenticator>
   </main>
