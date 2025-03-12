@@ -1,8 +1,9 @@
 body {
   margin: 0;
   background: linear-gradient(180deg, rgb(32, 159, 255), rgb(255, 255, 255));
-  /*background-image: url(https://www.starbritestudios.co.uk/images/events/events.png);*/
-  background-image: url(https://static.vecteezy.com/system/resources/previews/002/475/549/non_2x/colorful-firework-background-free-vector.jpg);
+  /*background-image: url(https://www.starbritestudios.co.uk/images/events/events.png);
+  background-image: url(https://static.vecteezy.com/system/resources/previews/002/475/549/non_2x/colorful-firework-background-free-vector.jpg);*/
+  background-image: url(https://i.pinimg.com/originals/24/0a/84/240a84a6e04f78fed90cb5a3413d6bcf.gif);
   background-size: cover;
   display: flex;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

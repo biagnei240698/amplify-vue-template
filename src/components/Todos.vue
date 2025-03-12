@@ -21,7 +21,6 @@ function listTodos() {
   }); 
 }
 
-
 function createTodo() {
   client.models.Todo.create({
     /*
