@@ -8,3 +8,18 @@ defineBackend({
   data,
 });
 
+
+const externalDataSourcesStack = backend.createStack("MyExternalDataSources");
+
+
+const externalTable = aws_dynamodb.Table.fromTableName(
+  externalDataSourcesStack,
+  "MyExternalPostTable",
+  "eventRecords"
+);
+
+
+backend.data.addDynamoDbDataSource(
+  "ExternalPostTableDataSource",
+  externalTable
+);

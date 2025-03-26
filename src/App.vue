@@ -21,7 +21,7 @@ function alerttext(){
   <main>
     <authenticator>
       <template v-slot="{ user, signOut }">
-        <h1>Hola {{user?.signInDetails?.loginId}}'s</h1>
+        <h1>GoFest > hola {{user?.signInDetails?.loginId}}'s</h1>
         <Todos />
         <!--
         <p>Message is: {{ message }}  {{ fecha }}</p>

@@ -34,7 +34,7 @@ function createTodo() {
   }).then(() => {
     // After creating a new todo, update the list of todos
     listTodos();
-    alert(title.value + " | " + fecha.value + " | " + tipoEvento.value + " | " + lugar.value + " | " + nombreEvento.value)
+   // alert(title.value + " | " + fecha.value + " | " + tipoEvento.value + " | " + lugar.value + " | " + nombreEvento.value)
   });
 }
 
